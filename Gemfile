@@ -31,6 +31,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'simple_form'
 gem 'devise'
 gem 'bulma-rails', "~> 0.7.2"
+gem 'public_activity'
+gem 'gravatar_image_tag'
+gem 'wysiwyg-rails'
+gem 'font-awesome-sass'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
