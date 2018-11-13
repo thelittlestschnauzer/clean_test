@@ -1,0 +1,113 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+.hero {
+	width: 100%;
+	height: 100%;
+	min-width: 100%;
+	min-height: 100%;
+	position: relative;
+}
+
+.hero::before {
+background-image: url(interior_photo.jpg);
+background-size: cover;
+content: "";
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+z-index: -2;
+opacity: 0.4;
+}
+
+.sans-serif {
+  font-family: -apple-system, BlinkMacSystemFont,
+               'avenir next', avenir,
+               helvetica, 'helvetica neue',
+               ubuntu,
+               roboto, noto,
+               'segoe ui', arial,
+               sans-serif;
+}
+.avenir { font-family: 'avenir next', avenir, sans-serif; }
+
+@media (min-width: 320px) {
+.hero::before {
+background-image: url(interior_photo.jpg);
+}
+}
+
+@media (min-width: 460px) {
+.hero::before {
+background-image: url(interior_photo.jpg);
+}
+}
+
+@media (min-width: 720px) {
+.hero::before {
+background-image: url(interior_photo.jpg);
+}
+}
+
+@media (min-width: 980px) {
+.hero::before {
+background-image: url(interior_photo.jpg);
+}
+}
+
+@media (min-width: 1240px) {
+.hero::before {
+background-image: url(interior_photo.jpg);
+}
+}
+
+@media (min-width: 1500px) {
+.hero::before {
+background-image: url(interior_photo.jpg);
+}
+}
+
+@media (min-width: 1760px) {
+.hero::before {
+background-image: url(interior_photo.jpg);
+}
+}
+
+
+.flex-center {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-content: center;
+}
+
+.hero-message {
+color: #fff;
+min-width: 100%;
+min-height: 12em;
+position: relative;
+}
+/*
+.hero-message::before {
+content: "";
+display: block;
+position: absolute;
+margin-left: 0;
+min-width: 100%;
+min-height: 12em;
+z-index: -1;
+opacity: 0.4;
+background-color: #343a40;
+}
+*/

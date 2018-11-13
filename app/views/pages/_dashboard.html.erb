@@ -1,0 +1,83 @@
+<section class="section pt3">
+	<p class="title is-5 border-bottom pb3 has-text-container">Welcome <%= current_user.first_name %></p>
+	<div class="columns">
+
+
+		<div class="column border-right ph4">
+			<div class="level">
+			  	<div class="level-left">
+			  		<h3 class="subtitle is-5">My Rooms <span class="tag is-rounded">0</span></h3>
+			  	</div>
+			  	<div class="level-right">
+			  		<p class="field">
+			  			<%= link_to "#", class: "button is-small" do %>
+			  				<span class="icon is-small has-text-link"><i class="fa fa-plus"></i></span>
+			  			<% end %>
+			  		</p>
+			  	</div>
+			  </div>
+			  <br />
+
+			  <div class="content border-bottom pb4">
+			  	<p class="title is-4">
+			  		<%= link_to 'Name of Room', '#' %>
+			  	</p>
+			  	<p class="subtitle is-6">
+			  		<%= link_to 'Family Name', '#' %>
+			  	</p>
+			  	<p class="f6">Created by Name</p>
+			  </div>
+			</div>
+
+			<div class="column border-right ph4">
+				<div class="level">
+					<div class="level-left">
+						<h3 class="subtitle is-5">My Family<span class="tag is-rounded">0</span></h3>
+					</div>
+					<div class="level-right">
+						<p class="field">
+						   <%= link_to '#', class: 'button is-small' do %>
+								<span class="icon is-small has-text-link"><i class="fa fa-plus"></i></span>
+						   <% end %>
+						</p>
+					</div>
+				</div>
+				<br />
+
+				<div class="content border-bottom pb4">
+					<p class="title is-4">
+						<%= link_to 'Room Name', '#' %>
+					</p>
+					<p class="subtitle is-6">
+						<%= link_to 'Family Room Chores', '#' %>
+					</p>
+					<p class="f6">Created by Name</p>
+				</div>
+			</div>
+
+			<div class="column border-right ph4">
+				<div class="level">
+					<div class="level-left">
+						<h3 class="subtitle is-5">Morning Chores <span class="tag is-rounded">0</span></h3>
+					</div>
+					<div class="level-right">
+						<p class="field">
+
+				<br />
+				<ul class="list">
+					<li class="pv2ph2 border-bottom">Unload Dishwasher</li>
+				</ul>
+			</div>
+
+		</div>
+	</section>
+
+			
+
+
+
+
+
+
+
+

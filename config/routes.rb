@@ -8,5 +8,5 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { registrations: 'registrations', confirmation: 'confirmations' }
   
-  root to: "pages#home"	
+  root to: "pages#index"	
 end

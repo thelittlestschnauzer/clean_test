@@ -17,3 +17,20 @@
  @import "froala_style.min";
  @import "font-awesome-sprockets";
  @import "font-awesome";
+
+ @import "base_styles.scss/*";
+
+
+.notification {
+	border-radius: 0;
+}
+
+.notification:not(:last-child) {
+	margin-bottom: 0;
+}
+
+.avenir { font-family: 'avenir next', avenir, sans-serif; }
+
+.mw5 {
+	padding-top: 0;
+}
