@@ -1,0 +1,24 @@
+<%= form_for @room do |f| %>
+	<% if @room.errors.any? %>
+	<ul>
+		<% @room.errors.full_messages.each do |msg| %>
+			<li><%= msg %></li>
+		<% end %>
+	</ul>
+	<% end %>
+	<%= f.label :name_of_room %>:
+	<%= f.text_field :name %>
+
+	<%= f.fields_for :lists do |l| %>
+
+		<%= l.label :title_of_chores_list %>:
+		<%= l.text_field :title %>
+
+		<%= l.fields_for :chores do |cl| %>
+			<%= cl.label :name_of_chore %>:
+			<%= cl.text_field :name %>
+		<% end %>
+
+	<% end %>
+	<%= f.submit %>
+<% end %>

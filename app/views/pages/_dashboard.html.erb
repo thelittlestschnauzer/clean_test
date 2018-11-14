@@ -6,17 +6,17 @@
 		<div class="column border-right ph4">
 			<div class="level">
 			  	<div class="level-left">
-			  		<h3 class="subtitle is-5">My Rooms <span class="tag is-rounded">0</span></h3>
+			  		<h3 class="subtitle is-5">Rooms<span class="tag is-rounded"><%= @rooms.count %></span></h3>
 			  	</div>
 			  	<div class="level-right">
 			  		<p class="field">
-			  			<%= link_to "#", class: "button is-small" do %>
+			  			<%= link_to new_room_path, class: "button is-small" do %>
 			  				<span class="icon is-small has-text-link"><i class="fa fa-plus"></i></span>
 			  			<% end %>
 			  		</p>
 			  	</div>
 			  </div>
-			  <br />
+			  
 
 			  <div class="content border-bottom pb4">
 			  	<p class="title is-4">
@@ -36,13 +36,12 @@
 					</div>
 					<div class="level-right">
 						<p class="field">
-						   <%= link_to '#', class: 'button is-small' do %>
+						   <%= link_to new_family_path, class: 'button is-small' do %>
 								<span class="icon is-small has-text-link"><i class="fa fa-plus"></i></span>
 						   <% end %>
 						</p>
 					</div>
 				</div>
-				<br />
 
 				<div class="content border-bottom pb4">
 					<p class="title is-4">
@@ -55,22 +54,17 @@
 				</div>
 			</div>
 
-			<div class="column border-right ph4">
-				<div class="level">
-					<div class="level-left">
-						<h3 class="subtitle is-5">Morning Chores <span class="tag is-rounded">0</span></h3>
-					</div>
-					<div class="level-right">
-						<p class="field">
+			<div class="column ph4">
+				
+			  <h3 class="subtitle is-5">Morning Chores</h3> 
 
-				<br />
 				<ul class="list">
 					<li class="pv2ph2 border-bottom">Unload Dishwasher</li>
 				</ul>
 			</div>
-
 		</div>
-	</section>
+	</div>
+</section>
 
 			
 

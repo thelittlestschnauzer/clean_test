@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 
 
+  resources :lists
+  resources :rooms
   resources :families
   as :user do 
   	put '/user/confirmation' => 'confirmations#update', :via => :patch, :as => :update_user_confirmation

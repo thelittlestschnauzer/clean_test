@@ -1,0 +1,7 @@
+<h2>List of Families</h2>
+<% @families.each do |family| %>
+	<%= family.name %>
+	<% family.users.each do  |user| %>
+	<%= user.first_name %>
+	<% end %>
+<% end %>

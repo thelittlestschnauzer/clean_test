@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_13_161828) do
+ActiveRecord::Schema.define(version: 2018_11_14_000917) do
 
   create_table "activities", force: :cascade do |t|
     t.string "trackable_type"
@@ -36,6 +36,22 @@ ActiveRecord::Schema.define(version: 2018_11_13_161828) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
+  end
+
+  create_table "lists", force: :cascade do |t|
+    t.string "title"
+    t.integer "room"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "rooms", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "family_id"
   end
 
   create_table "users", force: :cascade do |t|
