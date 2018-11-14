@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
 
 
+  resources :chores
   resources :lists
   resources :rooms
   resources :families
