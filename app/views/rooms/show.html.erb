@@ -1,6 +1,12 @@
 <section class="section">
 	<div class="container">
 		<h4><%= @room.name %></h4>
+		<br />
+
+		<p><%= @room.lists.each do |list| %></p>
+				<label><%= list.title %></label>
+				<label><%= list.chores.task %></label>
+		    <% end %>
 
 	</div>
 	

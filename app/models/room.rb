@@ -1,6 +1,8 @@
 class Room < ApplicationRecord
-	has_many :lists
-	has_many :chores, through: :lists
+	belongs_to :list
+	belongs_to :chore
+	
 
-	accepts_nested_attributes_for :lists
+	
+
 end

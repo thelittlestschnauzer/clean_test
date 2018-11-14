@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_14_000917) do
+ActiveRecord::Schema.define(version: 2018_11_14_183105) do
 
   create_table "activities", force: :cascade do |t|
     t.string "trackable_type"
@@ -31,6 +31,15 @@ ActiveRecord::Schema.define(version: 2018_11_14_000917) do
     t.index ["trackable_type", "trackable_id"], name: "index_activities_on_trackable_type_and_trackable_id"
   end
 
+  create_table "chores", force: :cascade do |t|
+    t.string "task"
+    t.string "description"
+    t.integer "list_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "room_id"
+  end
+
   create_table "families", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -40,7 +49,6 @@ ActiveRecord::Schema.define(version: 2018_11_14_000917) do
 
   create_table "lists", force: :cascade do |t|
     t.string "title"
-    t.integer "room"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -52,6 +60,8 @@ ActiveRecord::Schema.define(version: 2018_11_14_000917) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "family_id"
+    t.integer "list_id"
+    t.integer "chore_id"
   end
 
   create_table "users", force: :cascade do |t|
