@@ -1,6 +1,10 @@
 <section class="section">
 	<div class="column">
 		<%= @list.title %>
-		
+		<ul>
+			<% @list.rooms.each do |room| %>
+				<li><%= room.chore.task %></li>
+			<% end %>
+		</ul>
 	</div>
 </section>

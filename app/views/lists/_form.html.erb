@@ -14,8 +14,13 @@
 	<%= f.fields_for :chores do |c| %>
 		<%= c.label :task %>
 		<%= c.text_field :task %>
+		<%= c.fields_for :rooms do |r| %>
+			<%= r.label :name %>
+			<%= r.text_field :name %>
+
 		<% end %>
 		<br>
+		<% end %>
 
 	
 		<%= f.submit %>

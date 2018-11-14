@@ -22,7 +22,7 @@ class ListsController < ApplicationController
 	private 
 
 	def list_params
-		params.require(:list).permit(:title, chores_attributes: [:task])
+		params.require(:list).permit(:title, chores_attributes: [:task, rooms_attributes: [:name]])
 	end 
 
 	def set_list

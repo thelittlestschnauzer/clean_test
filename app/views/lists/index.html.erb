@@ -3,6 +3,8 @@
 		<% @lists.each do |list| %>
 		<ul>
 			<li><%= list.title %></li>
+			<li><%= list.chores.task %></li>
+			
 		</ul>
 		<% end %>
 	</div>
