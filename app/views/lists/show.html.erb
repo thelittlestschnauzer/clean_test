@@ -1,9 +1,14 @@
 <section class="section">
 	<div class="column">
+		List title: 
 		<%= @list.title %>
 		<ul>
+			Chores List for the room: 
 			<% @list.rooms.each do |room| %>
 				<li><%= room.chore.task %></li>
+				<label>Room Name: </label>
+				<li><%= room.name %></li>
+
 			<% end %>
 		</ul>
 	</div>

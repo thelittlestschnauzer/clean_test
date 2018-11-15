@@ -1,8 +1,8 @@
 class Chore < ApplicationRecord
-	has_many :lists
-	has_many :rooms, through: :lists
+	has_many :rooms
+	has_many :lists, through: :rooms
 
 	validates_presence_of :task
 
-	accepts_nested_attributes_for :rooms
+
 end

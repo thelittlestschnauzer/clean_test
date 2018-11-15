@@ -1,5 +1,7 @@
 class ListsController < ApplicationController
 	before_action :set_list, only: [:edit, :show, :update, :destroy]
+
+
 	def new 
 		@list = List.new
 		@list.chores.build 
@@ -10,11 +12,12 @@ class ListsController < ApplicationController
 	end 
 
 	def show 
+		@list = List.find(params[:id])
+
 	end 
 
 	def create
 		@list = List.create(list_params)
-		raise @list.inspect
 		redirect_to @list
 	end 
 
@@ -22,7 +25,7 @@ class ListsController < ApplicationController
 	private 
 
 	def list_params
-		params.require(:list).permit(:title, chores_attributes: [:task, rooms_attributes: [:name]])
+		params.require(:list).permit(:title, chores_attributes: [:task, rooms: [:name]])
 	end 
 
 	def set_list
